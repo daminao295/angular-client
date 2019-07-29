@@ -1,0 +1,34 @@
+<nav class="navbar navbar-inverse">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <a class="navbar-brand" href="#">Library</a>
+    </div>
+    <ul class="nav navbar-nav">
+      <li class="active"><a href="#">Home</a></li>
+      <li><a class="nav-link" routerLink="/books" routerLinkActive="active">Books</a></li>
+      <li><a class="nav-link" routerLink="/books" routerLinkActive="active">My Rents</a></li>
+
+
+      <li class="dropdown">
+        <a class="dropdown-toggle" data-toggle="dropdown" href="#">Control Panel
+        <span class="caret"></span></a>
+        <ul class="dropdown-menu">
+          <li><a href="#">Users</a></li>
+          <li><a href="#">Books</a></li>
+          <li><a href="#">Rents</a></li>
+          <li><a href="#">Profile</a></li>
+        </ul>
+      </li>
+    </ul>
+
+    <ul class="nav navbar-nav navbar-right">
+      <li><a href="#"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>
+      <li><a href="#"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
+    </ul>
+  </div>
+</nav>
+
+
+<router-outlet></router-outlet>
+
+

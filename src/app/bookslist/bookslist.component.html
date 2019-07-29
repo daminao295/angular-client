@@ -1,0 +1,25 @@
+<h2>My Books</h2>
+
+
+
+<table class="table table-hover">
+  <thead>
+    <tr>
+      <th scope="col">#</th>
+      <th scope="col">Name</th>
+      <th scope="col">Author</th>
+      <th scope="col">Release Date</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let book of books">
+      <th scope="row">{{book.id}}</th>
+      <td>{{book.name}}</td>
+      <td>Otto</td>
+      <td>@mdo</td>
+      <td><a class="btn btn-warning" routerLink="/{{book.id}}/edit" routerLinkActive="active">Edit</a></td>
+    </tr>
+  </tbody>
+</table>
+
+<a class="btn btn-primary" href="/new" role="button">Add new Book</a>
