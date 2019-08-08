@@ -1,0 +1,37 @@
+<p>user-edit works!</p>
+<div class="container">
+ <form (ngSubmit)="onSubmit()" #heroForm="ngForm">
+  <div class="form-group">
+    <label for="name">Username</label>
+    <input type="text" class="form-control" id="name"
+           required
+           [(ngModel)]="user.userName" name="name">
+  </div>
+  
+  <div class="form-group">
+    <label for="password">Password</label>
+    <input type="text"  class="form-control" id="password"
+           [(ngModel)]="user.pasword" name="password">
+  </div>
+  
+  <div class="form-group">
+    <label for="name">Name</label>
+    <input type="text"  class="form-control" id="name"
+           [(ngModel)]="user.name" name="name">
+  </div>
+
+  <div class="form-group">
+    <label for="lastName">Last Name</label>
+    <input type="text"  class="form-control" id="lastName"
+           [(ngModel)]="user.lastName" name="lastName">
+  </div>
+
+  <div class="form-group">
+    <label for="email">Email</label>
+    <input type="text"  class="form-control" id="email"
+           [(ngModel)]="user.email" name="email">
+  </div>
+
+  <button type="button" class="btn btn-default" (click)="createUser()">Add new user</button>
+</form>
+</div>

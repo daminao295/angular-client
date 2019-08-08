@@ -13,7 +13,7 @@
         <a class="dropdown-toggle" data-toggle="dropdown" href="#">Control Panel
         <span class="caret"></span></a>
         <ul class="dropdown-menu">
-          <li><a href="#">Users</a></li>
+          <li><a routerLink="/users">Users</a></li>
           <li><a href="#">Books</a></li>
           <li><a href="#">Rents</a></li>
           <li><a href="#">Profile</a></li>
@@ -22,12 +22,12 @@
     </ul>
 
     <ul class="nav navbar-nav navbar-right">
-      <li><a href="#"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>
-      <li><a href="#"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
+        <li><a href="#"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>
+      <li><a class="nav-link dropdown-item" (click)="logout()"><span class="glyphicon glyphicon-user"></span> Logout </a></li>
+      <li><a href="/login"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
     </ul>
   </div>
 </nav>
-
 
 <router-outlet></router-outlet>
 

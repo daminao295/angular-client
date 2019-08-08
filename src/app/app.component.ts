@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-
+import { AuthenticationService } from './service/authentication';
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
@@ -7,4 +7,14 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'angularClient';
+  
+  constructor(private authService: AuthenticationService) { 
+
+  }
+
+  logout() {
+    console.log("AppComponent logout");
+    this.authService.logOut();
+  }
+
 }

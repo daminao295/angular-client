@@ -1,5 +1,8 @@
 import { Component, OnInit } from '@angular/core';
-import {Book} from '../book';
+import { Book } from '../model/book';
+import { BookService } from '../service/book.service';
+import { Observable } from 'rxjs';
+
 
 @Component({
   selector: 'app-bookslist',
@@ -8,19 +11,17 @@ import {Book} from '../book';
 })
 export class BookslistComponent implements OnInit {
 
-   books : Book[];
+  books: Book[] = [];
 
-  constructor() { 
-    this.books = [
-      new Book(1, 'Windstorm', '1993-03-12'),
-      new Book(13, 'Bombasto', '1993-03-12'),
-      new Book(15, 'Magneta', '1993-03-12'),
-      new Book(20, 'Tornado', '1993-03-12')
-    ];
+  constructor(private bookService: BookService) {
   }
 
   ngOnInit() {
-
+    this.bookService.findAll().subscribe(data => {
+      this.books = data;
+    });
   }
+
+
 
 }

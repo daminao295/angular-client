@@ -15,11 +15,11 @@
     <tr *ngFor="let book of books">
       <th scope="row">{{book.id}}</th>
       <td>{{book.name}}</td>
-      <td>Otto</td>
-      <td>@mdo</td>
-      <td><a class="btn btn-warning" routerLink="/{{book.id}}/edit" routerLinkActive="active">Edit</a></td>
+      <td>{{book.author}}</td>
+      <td>{{book.releaseDate}}</td>
+      <td><a class="btn btn-warning" routerLink="/books/{{book.id}}/edit" routerLinkActive="active">Edit</a></td>
     </tr>
   </tbody>
 </table>
 
-<a class="btn btn-primary" href="/new" role="button">Add new Book</a>
+<a class="btn btn-primary" href="/books/new" role="button">Add new Book</a>
